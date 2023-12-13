@@ -28,13 +28,13 @@ function calculateTotalSpentByCategory(transactions) {
     }
   }
   for (let [key, val] of map) {
-    console.log("**************" +key + val);
+    // console.log("**************" +key + val);
     result.push({
        category: key,
        totalSpent : val
     })
   }
-  console.log(result)
+  // console.log(result)
   return result;
 }
 
