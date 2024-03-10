@@ -8,25 +8,27 @@ export function Assignment2() {
     const [inputText, setInputText] = useState('');
 
     // Your code starts here
-    function showAlert() {
-
-    }
+    const showAlert = useCallback(()=> {
+        alert(inputText)
+    }, [inputText])
     // Your code ends here
 
     return (
         <div>
+            <br />
             <input
                 type="text"
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 placeholder="Enter some text"
             />
-            <Alert showAlert={showAlert} />
+            <br />
+           <Alert showAlert={showAlert} />
         </div>
     );
 };
 
 function Alert({showAlert}) {
-    return <button onClick={showAlert}>Show Alert</button>
+    return <div><button onClick={showAlert}>Show Alert</button></div>
 }
 
